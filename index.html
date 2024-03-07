@@ -1,12 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Formulaire</title>
 </head>
+
 <body>
-    
+    <div class="global">
+
+        <div class="titre">
+            <div class="titreCo" type="button">
+                <p>Connexion</p>
+            </div>
+            <div class="titreSi" type="button">
+                <p>Inscription</p>
+            </div>
+        </div>
+
+        <div class="form-container">
+
+            <div class="slide-controls">
+                <input type="radio" name="slider" id="login" checked>
+                <input type="radio" name="slider" id="signup">
+                <label for="login" class="slide login">connexion</label>
+                <label for="signup" class="slide  signup">Inscription</label>
+                <div class="slide-tab"></div>
+            </div>
+
+            <div class="form-card">
+                <form class="Fconnexion">
+                    <div class="form-div">
+                        <input type="text" placeholder="E-mail" required>
+                        <input type="password" placeholder="Mot de passe" required>
+                    </div>
+                    <a href="" class="mdp">Mot de passe oublié ?</a>
+                    <input type="submit" value="Connexion">
+                    <div class="compte"><a href="">Créer un compte</a></div>
+                    <div class="gog">
+                        <button type="submit"> <img src="./gog.png" alt=""> Se connecter avec
+                            google</button>
+                    </div>
+                </form>
+
+                <form class="Fsignup">
+                    <div class="form-div">
+                        <input type="text" placeholder="E-mail" required>
+                        <input type="password" name="" id="" placeholder="Mot de passe" required>
+                        <input type="password" name="" id="" placeholder="confirmez le mot de passe" required>
+                        <input type="submit" value="Crée un compte">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --blanc: white;
+  --grs: rgba(235, 245, 255, 0.5);
+}
+
+html,
+body {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mona Sans", "Mona Sans Fallback", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    205deg,
+    rgb(36, 14, 0) 0%,
+    rgba(50, 27, 11, 0.877) 0%,
+    rgb(74, 31, 6) 0%,
+    rgb(0, 0, 0) 60%
+  );
+}
+
+.global {
+  max-width: 400px;
+  height: auto;
+  background: rgba(125, 125, 125, 0.114);
+  border: 1px solid rgba(255, 255, 255, 0.226);
+  padding: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: rgba(255, 255, 255, 0.178) 0px 4px 12px;
+}
+
+.titre {
+  display: flex;
+  width: 200px;
+}
+
+.titreCo,
+.titreSi {
+  transition: margin-left 0.2s ease;
+  color: var(--grs);
+}
+
+.titre p {
+  width: 320px;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-card {
+  display: flex;
+  width: 200%;
+}
+
+form {
+  width: 50%;
+  transition: margin-left 0.2s ease;
+}
+
+form .form-div {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+}
+
+form .form-div input {
+  height: 50px;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  font-size: 17px;
+  border: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.074);
+  margin-bottom: 1rem;
+  color: var(--blanc);
+  box-shadow: rgba(82, 82, 82, 0.1) 0px 4px 12px;
+}
+
+.mdp,
+.compte a {
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.mdp {
+  color: var(--grs);
+  margin: 1rem 0;
+}
+
+.compte {
+  text-align: center;
+}
+
+.compte a {
+  color: var(--grs);
+}
+
+form a:hover {
+  color: var(--blanc);
+}
+
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 1rem auto;
+  border-radius: 15px;
+  border: 1px solid var(--grs);
+  outline: none;
+  background: none;
+  color: var(--grs);
+  font-size: 15px;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background: var(--blanc);
+  color: black;
+  border: 1px solid var(--grs);
+  cursor: pointer;
+}
+
+.slide-controls {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0 0 0;
+  justify-content: space-between;
+  border: 1px solid var(--grs);
+  border-radius: 15px;
+  font-weight: bold;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.slide {
+  height: 100%;
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.slide-tab {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: -1;
+  background: var(--grs);
+}
+
+.login {
+  color: var(--blanc);
+}
+
+.signup {
+  color: var(--grs);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.gog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.gog button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 17px;
+  background: transparent;
+  color: var(--grs);
+  border-radius: 15px;
+  border: 1px solid var(--grs);
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.gog button:hover {
+  background: var(--blanc);
+  color: black;
+  border: 1px solid var(--grs);
+  cursor: pointer;
+}
+
+.gog img {
+  width: 25px;
+  height: auto;
+  margin-right: 15px;
+}
+
+#signup:checked ~ .slide-tab {
+  transition: left 0.2s ease-in-out;
+  left: 50%;
+}
+#signup:checked ~ .signup {
+  transition: color 0.2s ease-in-out 0.2s;
+  color: var(--blanc);
+}
+#signup:checked ~ .login {
+  transition: color 0.2s ease-in-out 0.2s;
+  color: var(--grs);
+}
+
+#login:checked ~ .slide-tab {
+  transition: left 0.2s ease-in;
+  left: 0%;
+}
+#login:checked ~ .login {
+  transition: color 0.2s ease-in-out 0.2s;
+  color: var(--blanc);
+}
+#login:checked ~ .signup {
+  transition: color 0.2s ease-in-out 0.2s;
+  color: var(--grs);
+}
